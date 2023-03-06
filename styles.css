@@ -1,0 +1,226 @@
+*,
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font: 400 16px/24px 'Pathway Gothic One', sans-serif;
+  background-color: black;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --appendix-info-gap: 1.5rem;
+  --tab-play: 0.25rem;
+  --icon-size: 1.5rem;
+  --radius: 0.375rem;
+
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  --font-xs: 1rem;
+  --font-sm: 1.375rem;
+  --font-md: 1.8rem;
+  --font-lg: 5rem;
+}
+
+.flex-between {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.no-click {
+  pointer-events: none;
+}
+
+.tabs-wrapper {
+  padding: var(--spacing-md);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.tabs-container {
+  transform: translateY(var(--tab-play));
+  gap: var(--spacing-md);
+  justify-content: start;
+  flex-direction: row;
+  display: flex;
+}
+
+.tab {
+  padding: var(--spacing-lg) var(--spacing-lg) calc(var(--spacing-lg) * 1.75);
+  border-radius: var(--radius) var(--radius) 0 0;
+  transform: translateY(var(--tab-play));
+  transition: transform 0.15s ease;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+}
+.tab:hover {
+  transform: translateY(0);
+}
+.tab:first-of-type {
+  background-color: #ea2030;
+}
+.tab:last-of-type {
+  background-color: #dce11f;
+}
+.tab.active {
+  background-color: #fff;
+}
+.tab img {
+  margin-bottom: var(--spacing-md);
+  min-height: 200px;
+  max-width: 100%;
+}
+.tab h3 {
+  font-stretch: extra-expanded;
+  font-size: var(--font-md);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+.tab p {
+  font-size: var(--font-sm);
+  font-family: serif;
+  font-style: italic;
+  letter-spacing: 0;
+  font-weight: 500;
+  max-width: 75%;
+  margin: auto;
+}
+
+.tabs-appendix {
+  border-radius: 0 0 var(--radius) var(--radius);
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: white;
+  font-stretch: condensed;
+  gap: var(--spacing-lg);
+  line-height: 4.5rem;
+  position: relative;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+.tabs-appendix h4 {
+  font-stretch: extra-condensed;
+  text-transform: uppercase;
+  font-size: var(--font-lg);
+  letter-spacing: -3px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.tabs-appendix .info {
+  font-size: var(--font-xs);
+  letter-spacing: 2px;
+  line-height: 2.5rem;
+  position: relative;
+  word-wrap: normal;
+}
+.tabs-appendix .info span {
+  padding-left: calc(var(--icon-size) + var(--spacing-sm));
+}
+.tabs-appendix .lessons {
+  padding-right: var(--appendix-info-gap);
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  font-weight: 600;
+}
+.start-icon::before {
+  top: calc(var(--icon-size) / 3);
+  height: var(--icon-size);
+  width: var(--icon-size);
+  position: absolute;
+  display: block;
+  bottom: auto;
+  content: '';
+  left: 0;
+}
+.tabs-appendix .lessons::before {
+  background: url('./images/icon-chat.svg') no-repeat center center;
+}
+.tabs-appendix .duration {
+  margin-left: var(--appendix-info-gap);
+  letter-spacing: 1px;
+  position: relative;
+  font-style: italic;
+  font-family: serif;
+}
+.tabs-appendix .duration::before {
+  background: url('./images/icon-clock.svg') no-repeat center center;
+}
+.tabs-appendix .lessons::after {
+  border-left: 1px solid black;
+  position: absolute;
+  display: block;
+  height: 2.5rem;
+  content: '';
+  width: 1px;
+  right: 0;
+  top: 0;
+}
+.tabs-content {
+  font-size: var(--font-md);
+}
+.tab-content {
+  padding: var(--spacing-lg) 3.75rem var(--spacing-lg) var(--spacing-xl);
+  background-color: rgb(255 255 255 / 0.09);
+  border-radius: var(--radius);
+  color: white;
+}
+
+.content {
+  display: none;
+}
+.content.active {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 3vmax;
+  }
+
+  .tabs-container {
+    gap: var(--spacing-sm);
+  }
+  .tab {
+    flex: 1;
+  }
+  .tab img {
+    min-height: auto;
+  }
+  .tab p {
+    max-width: auto;
+  }
+  .tabs-appendix {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  :root {
+    --appendix-info-gap: 1rem;
+    --tab-play: 0.125rem;
+    --radius: 0.35rem;
+
+    --spacing-sm: 0.5rem;
+    --spacing-md: 0.75rem;
+    --spacing-lg: 1rem;
+    --spacing-xl: 1.5rem;
+
+    --font-xs: 0.7rem;
+    --font-sm: 1rem;
+    --font-md: 1.5rem;
+    --font-lg: 4rem;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Syed NomanulHasan" />
+	<link rel="canonical" href="https://upwork.nomaanulhasan.com" />
+	<title>Tabs Clone - Crucial Learning</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet" />
+
+	<link rel="stylesheet" href="./styles.css" />
+	<script src="./scripts.js" defer></script>
+</head>
+
+<body>
+	<div class="tabs-wrapper" data-active-tab="ondemand">
+
+		<div class="tabs-container">
+			<div class="tab flex-between active" data-tab-name="ondemand">
+				<div class="no-click">
+					<img src="./images/icon-on-demand.svg" decoding="async" loading="lazy">
+					<h3>On-Demand</h3>
+					<p>Learn at your own pace online.</p>
+				</div>
+			</div>
+			<div class="tab flex-between" data-tab-name="virtual">
+				<div class="no-click">
+					<img src="./images/icon-virtual.svg" decoding="async" loading="lazy">
+					<h3>Virtual</h3>
+					<p>Join one of our instructors online.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="tabs-content">
+			<div class="content active" data-tab-content="ondemand">
+				<div class="tabs-appendix flex-between">
+					<h4>COURSE AGENDA</h4>
+					<div class="info flex-between">
+						<span class="lessons start-icon">7 Lessons</span>
+						<span class="duration start-icon">4-6 hrs.</span>
+					</div>
+				</div>
+
+				<div class="tab-content">
+					On-Demand tab content will load here
+				</div>
+			</div>
+
+			<div class="content" data-tab-content="virtual">
+				<div class="tabs-appendix flex-between">
+					<h4>COURSE AGENDA</h4>
+					<div class="info flex-between">
+						<span class="lessons start-icon">3 Sessions</span>
+						<span class="duration start-icon">7.5 hrs.</span>
+					</div>
+				</div>
+
+				<div class="tab-content">
+					Virtual tab content will load here
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>

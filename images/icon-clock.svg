@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 9</title>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Coursepage_Desktop_R3" transform="translate(-954.000000, -3795.000000)">
+            <g id="Group-4" transform="translate(955.000000, 3796.000000)">
+                <polygon id="Fill-1" fill="#000000" points="17.3013 11.8642 10.5053 11.8642 10.5053 3.1372 11.4953 3.1372 11.4953 10.8742 17.3013 10.8742"></polygon>
+                <path d="M11,0 C4.925,0 0,4.925 0,11 C0,17.075 4.925,22 11,22 C17.075,22 22,17.075 22,11 C22,4.925 17.075,0 11,0 Z" id="Stroke-2" stroke="#000000"></path>
+            </g>
+        </g>
+    </g>
+</svg>
